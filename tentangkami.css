@@ -1,0 +1,250 @@
+/* Global Style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #007b8a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #025302;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Tentang Kami Section */
+.tentangKami {
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(tentangkami.jfif);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    align-items: center;
+    color: #ffffff;
+    padding: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+
+h3 {
+    background-color: #025302;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text-isi {
+    background-color: #098528;
+    padding: 100px;
+    font-family: fantasy;
+    font-size: large;
+    color: white;
+    text-align: center;
+}
+
+.text-isi h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #025302;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Responsive Styles */
+
+/* Untuk layar dengan max-width 768px (tablet dan ponsel besar) */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      padding-right: 20px;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: black;
+      width: 100%;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+
+  .nav-toggle:checked + .hamburger + ul {
+      display: flex;
+  }
+
+  nav ul li {
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+  }
+
+  nav ul li:hover {
+      background-color: white;
+  }
+
+  nav ul li a {
+      font-size: 18px;
+      width: 100%;
+      display: block;
+      padding: 10px;
+  }
+
+  nav ul li a:hover {
+      color: black;
+  }
+
+    header {
+        padding: 15px 30px;
+    }
+
+    .tentangKami {
+        height: 250px;
+        font-size: 30px;
+        padding: 50px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .text-isi {
+        padding: 50px;
+        font-size: medium;
+    }
+
+    .text-isi h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .fa {
+        font-size: 24px;
+        width: 40px;
+    }
+}
+
+/* Untuk layar dengan max-width 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    .tentangKami {
+        height: 200px;
+        font-size: 25px;
+        padding: 30px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .text-isi {
+        padding: 30px;
+        font-size: small;
+    }
+
+    .text-isi h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .fa {
+        font-size: 20px;
+        width: 35px;
+    }
+}
+
+

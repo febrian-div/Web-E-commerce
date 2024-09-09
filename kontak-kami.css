@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #025302;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(12, 110, 3, 0.568);
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.kontak-kami {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 50px;
+}
+
+.left {
+    background-color: #098528;
+    padding: 50px;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.right {
+    background-color: white;
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.right h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.right form input,
+.right form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.right form button {
+    padding: 15px;
+    background-color: #07883d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.right form button:hover {
+    background-color: #008f9c;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(18, 114, 10, 0.568);
+    color: white;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    gap: 10px;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+/* Untuk layar dengan max-width 768px (tablet dan ponsel besar) */
+@media (max-width: 768px) {
+    .kontak-kami {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        padding-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .nav-toggle:checked + .hamburger + ul {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li:hover {
+        background-color: white;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    nav ul li a:hover {
+        color: black;
+    }
+}
+
+/* Untuk layar dengan max-width 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .kontak-kami {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .left,
+    .right {
+        padding: 15px;
+    }
+
+    .left h1,
+    .right h1 {
+        font-size: 24px;
+    }
+
+    .right form input,
+    .right form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .right form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .fa {
+        font-size: 24px;
+        width: 40px;
+    }
+}
